@@ -1,0 +1,77 @@
+.soundwave-bulb-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.soundwave-bulb-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Soundwave line animations */
+.soundwave-line {
+  transition: opacity 0.3s ease;
+}
+
+.wave-1 {
+  animation: wave-motion-1 3.2s ease-in-out infinite alternate;
+}
+
+.wave-2 {
+  animation: wave-motion-2 2.8s ease-in-out infinite alternate;
+}
+
+.wave-3 {
+  animation: wave-motion-3 2.4s ease-in-out infinite alternate;
+}
+
+.soundwave-laser {
+  animation: laser-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes wave-motion-1 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-1.5px);
+    opacity: 1;
+  }
+}
+
+@keyframes wave-motion-2 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(1.5px);
+    opacity: 0.95;
+  }
+}
+
+@keyframes wave-motion-3 {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes laser-pulse {
+  0% {
+    opacity: 0.6;
+    stroke-width: 1.4;
+  }
+  100% {
+    opacity: 1;
+    stroke-width: 2.2;
+  }
+}

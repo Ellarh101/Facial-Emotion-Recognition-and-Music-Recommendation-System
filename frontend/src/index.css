@@ -1,0 +1,98 @@
+:root {
+  /* Exact Colors from User's Cherry Blossom & Dusk Palette (Image 1) */
+  --palette-night-slate: #0C131A;    /* Top circle dark base: Abyssal Dusk Slate */
+  --palette-slate-deep: #141F2A;     /* Second circle: Deep Muted Slate-Blue */
+  --palette-slate-border: #233444;   /* Structural Borders & Elevates */
+  --palette-plum-mauve: #63434E;     /* Third circle: Dusty Plum / Deep Mauve-Rose */
+  --palette-blush-rose: #C98E8D;     /* Fourth circle: Soft Dusty Blush Rose */
+  --palette-lavender-mist: #7E8496;  /* Fifth circle: Muted Lavender-Mist / Lilac Slate */
+  --palette-porcelain: #F7EFEB;      /* Petal Silk: Clean, High-Contrast Text */
+
+  /* Soundwave Wave Accents (Image 2) */
+  --palette-wave-cyan: #38BDF8;
+  --palette-wave-magenta: #D946EF;
+  --palette-wave-violet: #818CF8;
+
+  /* Application Token Mapping for High-End Professional Web App */
+  --bg-canvas: #0A1017;
+  --bg-surface: #101923;
+  --bg-card: #141F2A;
+  --bg-card-elevated: #1B2836;
+  --bg-tile: #172431;
+
+  --border-card: #233444;
+  --border-subtle: rgba(126, 132, 150, 0.18);
+  --border-rose: rgba(201, 142, 141, 0.45);
+  --border-mauve: #63434E;
+
+  --text-primary: #F7EFEB;
+  --text-secondary: #C8D1DC;
+  --text-muted: #7E8496;
+  --text-rose: #C98E8D;
+  --text-dark: #0A1017;
+
+  /* Standardized Radii across all cards & pills */
+  --radius-card: 18px;
+  --radius-inner: 12px;
+  --radius-pill: 9999px;
+
+  /* Standardized Card Padding */
+  --card-padding: 28px;
+
+  /* Professional Shadows */
+  --shadow-card: 0 16px 36px -8px rgba(5, 8, 12, 0.8);
+  --shadow-active-card: 0 18px 40px -8px rgba(5, 8, 12, 0.85), 0 0 24px rgba(201, 142, 141, 0.18);
+  --shadow-video-feed: 0 16px 38px -6px rgba(5, 8, 12, 0.9), 0 0 26px rgba(56, 189, 248, 0.14);
+
+  --font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Custom professional scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--palette-slate-border);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--palette-plum-mauve);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

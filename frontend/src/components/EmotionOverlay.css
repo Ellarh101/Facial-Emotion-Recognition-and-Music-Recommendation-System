@@ -1,0 +1,152 @@
+.auren-overlay-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auren-overlay-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Viewfinder in Blossom Dusk Palette */
+.auren-hud-reticle {
+  position: relative;
+  width: 60%;
+  height: 70%;
+  border: 1px dashed rgba(201, 142, 141, 0.35);
+  border-radius: var(--radius-card);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.hud-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: var(--palette-blush-rose);
+  border-style: solid;
+  filter: drop-shadow(0 0 6px rgba(201, 142, 141, 0.6));
+}
+
+.hud-corner.top-left {
+  top: -2px;
+  left: -2px;
+  border-width: 3px 0 0 3px;
+  border-top-left-radius: 10px;
+}
+
+.hud-corner.top-right {
+  top: -2px;
+  right: -2px;
+  border-width: 3px 3px 0 0;
+  border-top-right-radius: 10px;
+}
+
+.hud-corner.bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-width: 0 0 3px 3px;
+  border-bottom-left-radius: 10px;
+}
+
+.hud-corner.bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 3px 3px 0;
+  border-bottom-right-radius: 10px;
+}
+
+/* Center crosshair */
+.hud-center-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.55;
+}
+
+.crosshair-h {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--palette-blush-rose);
+}
+
+.crosshair-v {
+  position: absolute;
+  top: 0;
+  left: 9px;
+  width: 2px;
+  height: 20px;
+  background: var(--palette-blush-rose);
+}
+
+/* Animated scanline sweep with cyan & rose glow */
+.hud-scan-sweep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--palette-wave-cyan), #ffffff, var(--palette-blush-rose), transparent);
+  box-shadow: 0 0 12px var(--palette-wave-cyan);
+  animation: hud-sweep 3.5s ease-in-out infinite alternate;
+  opacity: 0.75;
+}
+
+@keyframes hud-sweep {
+  0% { top: 5%; }
+  100% { top: 95%; }
+}
+
+/* Emotion Pill Badge in bottom-right */
+.auren-hud-emotion-pill {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(20, 31, 42, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 4px 16px rgba(5, 8, 12, 0.6);
+}
+
+.emotion-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background-color: var(--palette-wave-cyan);
+  box-shadow: 0 0 8px var(--palette-wave-cyan);
+}
+
+.emotion-name {
+  color: var(--palette-blush-rose);
+  letter-spacing: 0.05em;
+}
+
+.emotion-divider {
+  color: var(--border-card);
+}
+
+.emotion-percent {
+  color: #ffffff;
+}

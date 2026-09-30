@@ -1,0 +1,197 @@
+.intervention-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+}
+
+.intervention-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(201, 142, 141, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.intervention-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.intervention-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--palette-blush-rose);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.intervention-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.intervention-badge-pill {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--palette-plum-mauve), var(--palette-blush-rose));
+  border: 1px solid var(--border-card);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 10px rgba(99, 67, 78, 0.35);
+}
+
+/* Quote of the active rule */
+.intervention-rule-quote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card-elevated);
+  border: 1px solid var(--border-card);
+  padding: 12px 18px;
+  border-radius: var(--radius-inner);
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.rule-icon {
+  font-size: 1.1rem;
+}
+
+.rule-text {
+  line-height: 1.4;
+}
+
+/* 3-column adaptation grid in dusk slate tiles */
+.adaptations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 680px) {
+  .adaptations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.adaptation-tile {
+  background: var(--bg-tile);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-inner);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.adaptation-tile:hover {
+  border-color: var(--palette-blush-rose);
+  transform: translateY(-1px);
+}
+
+.tile-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tile-icon {
+  font-size: 1rem;
+}
+
+.tile-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.tile-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tile-sub {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.tile-pill {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  background: rgba(35, 52, 68, 0.45);
+  border: 1px solid var(--border-card);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+/* Break banner */
+.break-suggestion-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(99, 67, 78, 0.35), rgba(35, 52, 68, 0.5));
+  border: 1px solid var(--palette-blush-rose);
+  padding: 14px 20px;
+  border-radius: var(--radius-inner);
+}
+
+.break-icon {
+  font-size: 1.4rem;
+}
+
+.break-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.break-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--palette-blush-rose);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.break-body {
+  font-size: 0.84rem;
+  color: #ffffff;
+}
+
+/* Tip box */
+.intervention-tip-box {
+  background: var(--bg-card-elevated);
+  border: 1px solid var(--border-card);
+  padding: 14px 18px;
+  border-radius: var(--radius-inner);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
