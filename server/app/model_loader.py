@@ -1,8 +1,8 @@
 import json
 import tensorflow as tf
 
-MODEL_PATH = r"C:\Users\CBN\Desktop\Downloads\emotion_model_package\exported_model"
-LABEL_MAP_PATH = r"C:\Users\CBN\Desktop\Downloads\emotion_model_package\label_mapping.json"
+MODEL_PATH = "model/exported_model"
+LABEL_MAP_PATH = "model/label_mapping.json"
 
 _model = tf.saved_model.load(MODEL_PATH)
 _infer = _model.signatures["serving_default"]
